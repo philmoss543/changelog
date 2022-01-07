@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "standard-version",
+    "changelog": "auto-changelog --template changelog-template.hbs -p -u",
+    "release": "npm run version && npm run changelog",
+    "changelog-debug": "auto-changelog --template changelog-template.hbs -p --template json --output changelog-data.json"
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.3.0",
+    "standard-version": "^9.3.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
