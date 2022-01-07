@@ -1,0 +1,32 @@
+{{#each releases}}
+# {{title}}
+[{{isoDate}}]
+
+{{! list commits with feature: in message, use feature: or Feature: }}
+{{#commit-list
+  commits
+  heading='### DOTT vCMS backend now supports:'
+  message='(feature: )|(Feature: )|(feat: )|(Feat: )'
+  exclude='(fix: )|(Fix: )|(break: )|(Break: )'}}
+* {{subject}} ([`{{shorthash}}`]({{href}}))
+{{/commit-list}}
+
+{{! use fix: or Fix: }}
+{{#commit-list
+  commits
+  heading='### DOTT vCMS backend fixed the following bugs:'
+  message='(fix: )|(Fix: )'
+  exclude='(break: )|(Break: )|(Feature: )|(feature: )|(feat: )|(Feat: )'}}
+* {{subject}} ([`{{shorthash}}`]({{href}}))
+{{/commit-list}}
+
+{{! user break: or Break: }}
+{{#commit-list
+  commits
+  heading='### DOTT vCMS breaking changes:'
+  message='(break: )|(Break: )|(Feature!: )|(feature!: )|(feat!: )|(Feat!: )|(fix: )|(Fix: )'
+  exclude='(fix: )|(Fix: )'}}
+* {{subject}} ([`{{shorthash}}`]({{href}}))
+{{/commit-list}}
+
+{{/each}}

@@ -14,6 +14,30 @@
     "auto-changelog": "^2.3.0",
     "standard-version": "^9.3.2"
   },
+  "standard-version": {
+    "skip": {
+      "changelog": true,
+      "commit": true
+    }
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "unreleased": true,
+    "replaceText": {
+      "[Ff]eature:": "",
+      "[Ff]eat:": "",
+      "[Ff]ix:": "",
+      "[Ff]eature!:": "",
+      "[Ff]eat!:": "",
+      "[Ff]ix!:": "",
+      "[Bb]reak:": ""
+    },
+    "sortCommits": "date-desc",
+    "ignoreCommitPattern": "^((?!\\[(.*?)\\]).)*$",
+    "includeBranch": [
+      "dev"
+    ]
+  },
   "author": "",
   "license": "ISC"
 }

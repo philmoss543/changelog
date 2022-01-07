@@ -1,5 +1,12 @@
-# Changelog
+# v1.1.1
+[2022-01-07]
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+# v1.1.1
+[2022-01-06]
 
-### [1.1.1](///compare/v1.1.0...v1.1.1) (2022-01-07)
+# v1.1.0
+[2022-01-06]
+
+### DOTT vCMS backend now supports:
+
+* feat: blah ([`9ef6316`]())
